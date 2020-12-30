@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="7519386" started-at="2020-12-22T05:51:47Z" finished-at="2020-12-22T07:57:06Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="7519386" started-at="2020-12-22T05:51:47Z" finished-at="2020-12-22T07:57:06Z">
+      <class name="com.org.proj.application.Script.Driver">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.org.proj.application.Script.Driver@1753acfe]" name="setup" is-config="true" duration-ms="859" started-at="2020-12-22T11:21:47Z" finished-at="2020-12-22T11:21:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="runtestsInSuite()[pri:0, instance:com.org.proj.application.Script.Driver@1753acfe]" name="runtestsInSuite" duration-ms="7518448" started-at="2020-12-22T11:21:47Z" finished-at="2020-12-22T13:27:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runtestsInSuite -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.org.proj.application.Script.Driver@1753acfe]" name="teardown" is-config="true" duration-ms="0" started-at="2020-12-22T13:27:06Z" finished-at="2020-12-22T13:27:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.org.proj.application.Script.Driver -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

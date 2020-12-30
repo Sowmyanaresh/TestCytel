@@ -1,0 +1,357 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Selenium</groupId>
+	<artifactId>Selenium</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Selenium</name>
+	<description>Selenium</description>
+
+	<profiles>
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<maven.test.failure.ignore>true</maven.test.failure.ignore>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-eclipse-plugin</artifactId>
+						<version>2.8</version>
+						<configuration>
+		                    <downloadSources>true</downloadSources>
+		                    <downloadJavadocs>true</downloadJavadocs>
+		                </configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>2.3.2</version>
+						<configuration>
+							<source>1.5</source>
+							<target>1.5</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.18.1</version>
+						<configuration>
+							<testFailureIgnore>true</testFailureIgnore>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>2.53.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.53.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-firefox-driver</artifactId>
+			<version>2.53.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-api</artifactId>
+			<version>2.53.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.opera</groupId>
+			<artifactId>operadriver</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>Fillo-1.12</groupId>
+			<artifactId>Fillo-1.12</artifactId>
+			<version>Fillo-1.12</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/Fillo-1.12.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>GenericWebObjectLibrary</groupId>
+			<artifactId>GenericWebObjectLibrary</artifactId>
+			<version>GenericWebObjectLibrary</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/GenericWebObjectLibrary.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>GenericUtilityLibrary</groupId>
+			<artifactId>GenericUtilityLibrary</artifactId>
+			<version>GenericUtilityLibrary</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/GenericUtilityLibrary.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>Driver</groupId>
+			<artifactId>Driver</artifactId>
+			<version>Driver</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/Driver.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>GlobalVariables</groupId>
+			<artifactId>GlobalVariables</artifactId>
+			<version>GlobalVariables</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/GlobalVariables.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>activation</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/activation.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>sqljdbc4-2.0</groupId>
+			<artifactId>sqljdbc4-2.0</artifactId>
+			<version>sqljdbc4-2.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/sqljdbc4-2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>ojdbc14</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>ojdbc14</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/ojdbc14.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>RallyRest</groupId>
+			<artifactId>RallyRest</artifactId>
+			<version>RallyRest</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/RallyRest.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ini4j</groupId>
+			<artifactId>ini4j</artifactId>
+			<version>0.5.4</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>com.jayway.restassured</groupId> <artifactId>rest-assured</artifactId> 
+			<version>2.9.0</version> </dependency> -->
+
+	<!-- https://mvnrepository.com/artifact/com.microsoft.ews-java-api/ews-java-api -->
+              <dependency>
+                  <groupId>com.microsoft.ews-java-api</groupId>
+                  <artifactId>ews-java-api</artifactId>
+                  <version>2.0</version>
+              </dependency>
+
+                <!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+              <dependency>
+                  <groupId>javax.mail</groupId>
+                  <artifactId>javax.mail-api</artifactId>
+                  <version>1.5.5</version>
+              </dependency>
+	
+
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>3.0.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>xml-path</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.rallydev.rest</groupId>
+			<artifactId>rally-rest-api</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.11</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>1.8.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.54</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>pCloudy-java-connector</groupId>
+			<artifactId>pCloudy-java-connector</artifactId>
+			<version>11.0.3</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/jars/pCloudy-java-connector_v10_20170427-1753.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.oltu.oauth2</groupId>
+			<artifactId>org.apache.oltu.oauth2.client</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.testlink.client</groupId>
+		    <artifactId>testlink-api-client</artifactId>
+		    <version>2.0</version>
+		    <scope>system</scope>
+			<systemPath>${basedir}/jars/testlink/testlink-api-client-2.0.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>xmlrpc-client-sources</groupId>
+		    <artifactId>xmlrpc-client-3.1-sources</artifactId>
+		    <version>3.1</version>
+		    <scope>system</scope>
+			<systemPath>${basedir}/jars/testlink/xmlrpc-client-3.1-sources.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>xmlrpc-client</groupId>
+		    <artifactId>xmlrpc-client-3.1</artifactId>
+		    <version>3.1</version>
+		    <scope>system</scope>
+			<systemPath>${basedir}/jars/testlink/xmlrpc-client-3.1.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>xmlrpc-common-sources</groupId>
+		    <artifactId>xmlrpc-common-3.1-sources</artifactId>
+		    <version>3.1</version>
+		    <scope>system</scope>
+			<systemPath>${basedir}/jars/testlink/xmlrpc-common-3.1-sources.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>xmlrpc-common</groupId>
+		    <artifactId>xmlrpc-common-3.1</artifactId>
+		    <version>3.1</version>
+		    <scope>system</scope>
+			<systemPath>${basedir}/jars/testlink/xmlrpc-common-3.1.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>ws-commons-util-1.0.2</groupId>
+		    <artifactId>ws-commons-util-1.0.2</artifactId>
+		    <version>1.0.2</version>
+		    <scope>system</scope>
+			<systemPath>${basedir}/jars/testlink/ws-commons-util-1.0.2.jar</systemPath>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.6</version>
+		</dependency>
+		<dependency>
+			  <groupId>com.jayway.restassured</groupId>
+			  <artifactId>rest-assured</artifactId>
+			  <version>2.9.0</version>
+		  </dependency>
+		  <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-email</artifactId>
+    <version>1.3.1</version>    
+</dependency>
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>javax.mail-api</artifactId>
+    <version>1.5.5</version>
+</dependency>
+ <dependency >
+            <groupId >com.sun.mail </groupId >
+            <artifactId >javax.mail </artifactId >
+            <version >1.5.4 </version >
+        </dependency >
+<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+
+
+		  
+		  <!-- <dependency>
+			  <groupId>com.jayway.restassured</groupId>
+			  <artifactId>json-schema-validator</artifactId>
+			  <version>2.9.0</version>
+			  <scope>test</scope>
+		  </dependency> -->
+	   
+	
+	
+		
+<!-- 		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>9.0.2.0.0</version>
+		</dependency> -->
+		
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.opera</groupId>
+				<artifactId>operadriver</artifactId>
+				<version>1.5</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.seleniumhq.selenium</groupId>
+						<artifactId>selenium-remote-driver</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
